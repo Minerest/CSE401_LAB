@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/ericd/cse401/LAB1/tb_adder5_isim_beh.exe" -prj "/home/ericd/cse401/LAB1/tb_adder5_beh.prj" "work.tb_adder5" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/ericd/cse401/LAB1/tb_addsub_isim_beh.exe" -prj "/home/ericd/cse401/LAB1/tb_addsub_beh.prj" "work.tb_addsub" "work.glbl" 

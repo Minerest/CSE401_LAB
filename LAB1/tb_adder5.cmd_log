@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/ericd/cse401/LAB1/tb_adder5.xst" -ofn "/home/ericd/cse401/LAB1/tb_adder5.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim tb_adder5.ngc tb_adder5_synthesis.v 
