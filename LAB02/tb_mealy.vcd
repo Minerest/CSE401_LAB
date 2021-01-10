@@ -1,0 +1,275 @@
+$date
+	Sat Jan 09 16:55:52 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_mealy $end
+$var wire 1 ! Output $end
+$var reg 1 " CLK $end
+$var reg 1 # Input $end
+$var reg 1 $ RST $end
+$scope module m1 $end
+$var wire 1 % AND1 $end
+$var wire 1 & AND2 $end
+$var wire 1 ' AND3 $end
+$var wire 1 ( AND4 $end
+$var wire 1 ) AND5 $end
+$var wire 1 * AND6 $end
+$var wire 1 + AND7 $end
+$var wire 1 " CLK $end
+$var wire 1 # I $end
+$var wire 1 , NO $end
+$var wire 1 ! O $end
+$var wire 1 - OR1 $end
+$var wire 1 . OR2 $end
+$var wire 1 / OR3 $end
+$var wire 1 $ RST $end
+$var wire 1 0 QN1 $end
+$var wire 1 1 QN0 $end
+$var wire 1 2 Q1 $end
+$var wire 1 3 Q0 $end
+$scope module D0 $end
+$var wire 1 " CLK $end
+$var wire 1 . D $end
+$var wire 1 1 Qnot $end
+$var wire 1 $ RST $end
+$var reg 1 3 Q $end
+$upscope $end
+$scope module D1 $end
+$var wire 1 " CLK $end
+$var wire 1 / D $end
+$var wire 1 0 Qnot $end
+$var wire 1 $ RST $end
+$var reg 1 2 Q $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+03
+02
+11
+10
+0/
+0.
+0-
+z,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#5000
+1$
+#10000
+1.
+1-
+1%
+1"
+1#
+#15000
+0"
+#20000
+0.
+01
+1(
+0-
+13
+0%
+1"
+0#
+#25000
+0"
+#30000
+1.
+1-
+1%
+11
+0(
+0/
+03
+0)
+1"
+1#
+#35000
+0"
+#40000
+0.
+0-
+1/
+0%
+1)
+01
+1(
+13
+1"
+#45000
+0"
+#50000
+1.
+1+
+1-
+00
+1*
+1&
+11
+0(
+1/
+12
+03
+0)
+1"
+0#
+#55000
+0"
+#60000
+0-
+0*
+0&
+0/
+01
+1!
+0+
+13
+0%
+1'
+1"
+1#
+#65000
+0"
+#70000
+1(
+10
+0!
+0.
+02
+0'
+1"
+0#
+#75000
+0"
+#80000
+1.
+1-
+1%
+11
+0(
+0/
+03
+0)
+1"
+1#
+#85000
+0"
+#90000
+0.
+0-
+1/
+0%
+1)
+01
+1(
+13
+1"
+#95000
+0"
+#100000
+1.
+1+
+1-
+1*
+1&
+11
+0(
+00
+1/
+03
+12
+0)
+1"
+0#
+#105000
+0"
+#110000
+0-
+0*
+0&
+0/
+01
+1!
+0+
+13
+0%
+1'
+1"
+1#
+#115000
+0"
+#120000
+1/
+1)
+1(
+0.
+10
+0!
+0'
+02
+1"
+#125000
+0"
+#130000
+1.
+1+
+1-
+00
+1*
+1&
+11
+0(
+1/
+12
+03
+0)
+1"
+0#
+#135000
+0"
+#140000
+0-
+0*
+0&
+0/
+01
+1!
+0+
+13
+0%
+1'
+1"
+1#
+#145000
+0"
+#150000
+1/
+1)
+1(
+0.
+10
+0!
+0'
+02
+1"
+#155000
+0"
