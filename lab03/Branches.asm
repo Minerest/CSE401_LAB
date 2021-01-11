@@ -33,7 +33,7 @@ Exit:
 	li $v0 10
 	syscall
 	
-.data					# Changeable Input Values to test program.
+.data				# Changeable Input Values to test program.
 
 A: .word 10
 B: .word 15
