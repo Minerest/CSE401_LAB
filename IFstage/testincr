@@ -1,0 +1,51 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-965-g55e06db6)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000000001b9220 .scope module, "test_incr" "test_incr" 2 2;
+ .timescale -9 -12;
+v0000000000872ae0_0 .var "pcin", 31 0;
+v0000000000872b80_0 .net "pcout", 31 0, L_0000000000872c20;  1 drivers
+E_00000000001bb940 .event edge, v00000000008a62b0_0;
+S_00000000001b93b0 .scope module, "uut" "incr" 2 8, 3 1 0, S_00000000001b9220;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "pcin";
+    .port_info 1 /OUTPUT 32 "pcout";
+L_00000000008e7838 .functor BUFT 1, C4<00000000000000000000000000000001>, C4<0>, C4<0>, C4<0>;
+v00000000001b8970_0 .net/2u *"_ivl_0", 31 0, L_00000000008e7838;  1 drivers
+v00000000008a62b0_0 .net "pcin", 31 0, v0000000000872ae0_0;  1 drivers
+v0000000000872a40_0 .net "pcout", 31 0, L_0000000000872c20;  alias, 1 drivers
+L_0000000000872c20 .arith/sum 32, v0000000000872ae0_0, L_00000000008e7838;
+    .scope S_00000000001b9220;
+T_0 ;
+    %vpi_call 2 12 "$dumpfile", "testincr.vcd" {0 0 0};
+    %vpi_call 2 13 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000000001b9220 {0 0 0};
+    %pushi/vec4 3, 0, 32;
+    %store/vec4 v0000000000872ae0_0, 0, 32;
+    %delay 10000, 0;
+    %pushi/vec4 15, 0, 32;
+    %store/vec4 v0000000000872ae0_0, 0, 32;
+    %delay 10000, 0;
+    %pushi/vec4 64, 0, 32;
+    %store/vec4 v0000000000872ae0_0, 0, 32;
+    %vpi_call 2 21 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_00000000001b9220;
+T_1 ;
+    %wait E_00000000001bb940;
+    %delay 1000, 0;
+    %vpi_call 2 25 "$display", "Time = %0d\011pcin=%0d\011pcout=%0d", $time, v0000000000872ae0_0, v0000000000872b80_0 {0 0 0};
+    %jmp T_1;
+    .thread T_1, $push;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "test_incr.v";
+    "incr.v";
