@@ -1,0 +1,67 @@
+$date
+	Tue Jan 12 04:23:01 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_mux $end
+$var wire 32 ! y [31:0] $end
+$var reg 32 " a [31:0] $end
+$var reg 32 # b [31:0] $end
+$var reg 1 $ sel $end
+$scope module uut $end
+$var wire 32 % a [31:0] $end
+$var wire 32 & b [31:0] $end
+$var wire 1 $ sel $end
+$var wire 32 ' y [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 '
+b0 &
+b0 %
+0$
+b0 #
+b0 "
+b0 !
+$end
+#100000
+b10 !
+b10 '
+b10 #
+b10 &
+b1 "
+b1 %
+#200000
+b101 !
+b101 '
+1$
+b0 #
+b0 &
+b101 "
+b101 %
+#300000
+b1010 !
+b1010 '
+b1 #
+b1 &
+b1010 "
+b1010 %
+#400000
+b11 !
+b11 '
+0$
+b11 #
+b11 &
+b11001 "
+b11001 %
+#500000
+b0xx0x1 !
+b0xx0x1 '
+x$
+#600000

@@ -1,4 +1,4 @@
-
+`timescale 1ns / 1ps
 module if_id (
    output reg [31:0] instrout,       // Output of IF/ID Instruction Register
                        npcout,       // Output of IF/ID NPC Register

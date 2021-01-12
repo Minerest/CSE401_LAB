@@ -1,4 +1,4 @@
-
+`timescale 1ns / 1ps
 module memory (
    output reg [31:0] data,    // Output of Instruction Memory
    input wire [31:0] addr     // Input of Instruction Memory

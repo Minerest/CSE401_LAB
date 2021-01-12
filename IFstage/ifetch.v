@@ -1,5 +1,4 @@
 `timescale 1ns / 1ps
-
 module ifetch (
    output wire  [31:0] IF_ID_instr,
    output wire  [31:0] IF_ID_npc,

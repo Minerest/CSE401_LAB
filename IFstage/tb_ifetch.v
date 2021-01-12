@@ -1,5 +1,4 @@
 // Testbench ifetch
-`timescale 1ns / 1ps
 module tb_ifetch;
     // inputs
     reg EX_MEM_PCSrc;
@@ -16,12 +15,7 @@ module tb_ifetch;
         $dumpvars(0, tb_ifetch);
         EX_MEM_NPC = 0;
         EX_MEM_PCSrc = 0;
-        #9
-        EX_MEM_NPC = 5;
-        EX_MEM_PCSrc = 1;
-        #1
-        EX_MEM_PCSrc = 0;
-        #10
+        #20
         $finish;
     end
     endmodule

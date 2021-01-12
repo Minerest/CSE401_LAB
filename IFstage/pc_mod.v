@@ -1,4 +1,4 @@
-
+`timescale 1ns / 1ps
 module pc_mod (
    output reg [31:0] PC,             // Output of pc_mod
    input wire [31:0] npc             // Input of pc_mod

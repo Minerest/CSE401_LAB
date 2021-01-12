@@ -5,7 +5,7 @@ module test_incr;
 
 	reg [31:0] pcin;
 	
-	incr uut ( pcin, pcout );
+	incrementer uut ( pcin, pcout );
 	
 	initial begin
 	
@@ -17,7 +17,7 @@ module test_incr;
 		pcin = 15;
 		#10
 		pcin = 64;
-		
+		#10
 		$finish;
 	end
 	

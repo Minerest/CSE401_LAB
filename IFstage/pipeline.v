@@ -1,4 +1,4 @@
-
+`timescale 1ns / 1ps
 module pipeline ();
 
   wire [31:0] IF_ID_instr, IF_ID_npc;
