@@ -9,7 +9,7 @@ module tb_ifetch;
     output [31:0] IF_ID_instr;
     output [31:0] IF_ID_npc;
 
-    ifetch uut (.IF_ID_instr(IF_ID_instr), .IF_ID_npc(IF_ID_npc), .EX_MEM_PCSrc(EX_MEM_PCSrc), .EX_MEM_NPC(EX_MEM_NPC));
+    ifetch uut (IF_ID_instr, IF_ID_npc, EX_MEM_PCSrc, EX_MEM_NPC);
 
     initial begin
         $dumpfile("tb_ifetch.vcd");
