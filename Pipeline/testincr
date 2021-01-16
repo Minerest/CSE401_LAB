@@ -1,0 +1,52 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-965-g55e06db6)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000000000108a820 .scope module, "test_incr" "test_incr" 2 2;
+ .timescale -9 -12;
+v000000000108a9b0_0 .var "pcin", 31 0;
+v000000000108ed50_0 .net "pcout", 31 0, L_000000000108edf0;  1 drivers
+E_000000000108cc60 .event edge, v00000000010d5660_0;
+S_000000000108ebc0 .scope module, "uut" "incrementer" 2 8, 3 3 0, S_000000000108a820;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "pcin";
+    .port_info 1 /OUTPUT 32 "pcout";
+L_0000000001117838 .functor BUFT 1, C4<00000000000000000000000000000001>, C4<0>, C4<0>, C4<0>;
+v0000000001086ba0_0 .net/2u *"_ivl_0", 31 0, L_0000000001117838;  1 drivers
+v00000000010d5660_0 .net "pcin", 31 0, v000000000108a9b0_0;  1 drivers
+v000000000108be90_0 .net "pcout", 31 0, L_000000000108edf0;  alias, 1 drivers
+L_000000000108edf0 .arith/sum 32, v000000000108a9b0_0, L_0000000001117838;
+    .scope S_000000000108a820;
+T_0 ;
+    %vpi_call 2 12 "$dumpfile", "testincr.vcd" {0 0 0};
+    %vpi_call 2 13 "$dumpvars", 32'sb00000000000000000000000000000000, S_000000000108a820 {0 0 0};
+    %pushi/vec4 3, 0, 32;
+    %store/vec4 v000000000108a9b0_0, 0, 32;
+    %delay 10000, 0;
+    %pushi/vec4 15, 0, 32;
+    %store/vec4 v000000000108a9b0_0, 0, 32;
+    %delay 10000, 0;
+    %pushi/vec4 64, 0, 32;
+    %store/vec4 v000000000108a9b0_0, 0, 32;
+    %delay 10000, 0;
+    %vpi_call 2 21 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_000000000108a820;
+T_1 ;
+    %wait E_000000000108cc60;
+    %delay 1000, 0;
+    %vpi_call 2 25 "$display", "Time = %0d\011pcin=%0d\011pcout=%0d", $time, v000000000108a9b0_0, v000000000108ed50_0 {0 0 0};
+    %jmp T_1;
+    .thread T_1, $push;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    ".\test_incr.v";
+    ".\incr.v";

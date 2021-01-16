@@ -1,0 +1,36 @@
+$date
+	Tue Jan 12 04:26:16 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module test_incr $end
+$var wire 32 ! pcout [31:0] $end
+$var reg 32 " pcin [31:0] $end
+$scope module uut $end
+$var wire 32 # pcin [31:0] $end
+$var wire 32 $ pcout [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b100 $
+b11 #
+b11 "
+b100 !
+$end
+#10000
+b10000 !
+b10000 $
+b1111 "
+b1111 #
+#20000
+b1000001 !
+b1000001 $
+b1000000 "
+b1000000 #
+#30000
