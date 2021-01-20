@@ -1,0 +1,64 @@
+ISim log file
+Running: /home/ericd/CSE401_LAB/Pipeline/pipeline_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/ericd/CSE401_LAB/Pipeline/pipeline_isim_beh.wdb 
+INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
+ISim P.20131013 (signature 0xfbc00daa)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Time	 PC	 npc	 dataout of MEM	 IF_ID_instr	 IF_ID_npc
+From Register Memory:
+	REG[0] = x
+	REG[1] = x
+	REG[2] = x
+	REG[3] = x
+	REG[4] = x
+	REG[5] = x
+	REG[6] = x
+	REG[7] = x
+	REG[8] = x
+	...
+	REG[31] = x
+Time	 WB	 M	 EX	 NPCout	 rdata1	 rdata2	 sign_e	 in2016	 in1511
+Time	 WB	 branch	 memread	 memwrite	 ADD	 ZERO	 alu	 rdata2	 fivebitmux	
+From Data Memory (data.txt):
+	DMEM[0] = 0
+	DMEM[1] = 1
+	DMEM[2] = 2
+	DMEM[3] = 3
+	DMEM[4] = 4
+	DMEM[5] = 5
+From Data Memory (initial):
+	DMEM[6] = 6
+	DMEM[7] = 7
+	DMEM[8] = 8
+	DMEM[9] = 9
+	...
+	DMEM[255] = 255
+Finished circuit initialization process.
+0	 0	 1	 8c010001	 00000000	 0
+1	 0	 0	 0	 0	 0	 1	 0	 0	 0	
+2	 10	 0	 0	 0	 0	 x	 x	 0	 0	
+3	 11	 0	 1	 0	 2	 0	 1	 0	 1	
+4	 11	 0	 1	 0	 4	 0	 2	 0	 2	
+5	 11	 0	 1	 0	 6	 0	 3	 0	 3	
+6	 0	 0	 0	 0	 4	 1	 0	 0	 0	
+7	 0	 0	 0	 0	 5	 1	 0	 0	 0	
+8	 10	 0	 0	 0	 2086	 0	 3	 2	 1	
+9	 0	 0	 0	 0	 7	 1	 0	 0	 0	
+10	 0	 0	 0	 0	 8	 1	 0	 0	 0	
+11	 0	 0	 0	 0	 9	 1	 0	 0	 0	
+12	 10	 0	 0	 0	 2090	 0	 6	 3	 1	
+13	 0	 0	 0	 0	 11	 1	 0	 0	 0	
+14	 0	 0	 0	 0	 12	 1	 0	 0	 0	
+15	 0	 0	 0	 0	 13	 1	 0	 0	 0	
+16	 10	 0	 0	 0	 2094	 0	 12	 6	 1	
+17	 0	 0	 0	 0	 15	 1	 0	 0	 0	
+18	 0	 0	 0	 0	 16	 1	 0	 0	 0	
+19	 0	 0	 0	 0	 17	 1	 0	 0	 0	
+Stopped at time : 20 ns : File "/home/ericd/CSE401_LAB/Pipeline/ifetch.v" Line 36

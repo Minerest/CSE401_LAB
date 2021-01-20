@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/ericd/CSE401_LAB/Pipeline/pipeline_isim_beh.exe" -prj "/home/ericd/CSE401_LAB/Pipeline/pipeline_beh.prj" "work.pipeline" "work.glbl" 

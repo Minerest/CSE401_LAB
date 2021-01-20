@@ -1,0 +1,64 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/ericd/CSE401_LAB/Pipeline/pipeline_isim_beh.exe -prj /home/ericd/CSE401_LAB/Pipeline/pipeline_beh.prj work.pipeline work.glbl 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 12
+Turning on mult-threading, number of parallel sub-compilation jobs: 24 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/ericd/CSE401_LAB/Pipeline/s_extend.v" into library work
+Analyzing Verilog file "/home/ericd/CSE401_LAB/Pipeline/reg.v" into library work
+Analyzing Verilog file "/home/ericd/CSE401_LAB/Pipeline/pc_mod.v" into library work
+Analyzing Verilog file "/home/ericd/CSE401_LAB/Pipeline/mux.v" into library work
+Analyzing Verilog file "/home/ericd/CSE401_LAB/Pipeline/mem_wb.v" into library work
+Analyzing Verilog file "/home/ericd/CSE401_LAB/Pipeline/mem.v" into library work
+Analyzing Verilog file "/home/ericd/CSE401_LAB/Pipeline/incr.v" into library work
+Analyzing Verilog file "/home/ericd/CSE401_LAB/Pipeline/if_id.v" into library work
+Analyzing Verilog file "/home/ericd/CSE401_LAB/Pipeline/id_ex.v" into library work
+Analyzing Verilog file "/home/ericd/CSE401_LAB/Pipeline/ex_mem.v" into library work
+Analyzing Verilog file "/home/ericd/CSE401_LAB/Pipeline/data_memory.v" into library work
+Analyzing Verilog file "/home/ericd/CSE401_LAB/Pipeline/control.v" into library work
+Analyzing Verilog file "/home/ericd/CSE401_LAB/Pipeline/bottom_mux.v" into library work
+Analyzing Verilog file "/home/ericd/CSE401_LAB/Pipeline/AND.v" into library work
+Analyzing Verilog file "/home/ericd/CSE401_LAB/Pipeline/alu_control.v" into library work
+Analyzing Verilog file "/home/ericd/CSE401_LAB/Pipeline/alu.v" into library work
+Analyzing Verilog file "/home/ericd/CSE401_LAB/Pipeline/adder.v" into library work
+Analyzing Verilog file "/home/ericd/CSE401_LAB/Pipeline/writeback.v" into library work
+Analyzing Verilog file "/home/ericd/CSE401_LAB/Pipeline/MEMORY.v" into library work
+Analyzing Verilog file "/home/ericd/CSE401_LAB/Pipeline/ifetch.v" into library work
+Analyzing Verilog file "/home/ericd/CSE401_LAB/Pipeline/idecode.v" into library work
+Analyzing Verilog file "/home/ericd/CSE401_LAB/Pipeline/execute.v" into library work
+Analyzing Verilog file "/home/ericd/CSE401_LAB/Pipeline/pipeline.v" into library work
+Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 83444 KB
+Fuse CPU Usage: 430 ms
+Compiling module mux
+Compiling module pc_mod
+Compiling module memory
+Compiling module if_id
+Compiling module incrementer
+Compiling module ifetch
+Compiling module control
+Compiling module register
+Compiling module s_extend
+Compiling module id_ex
+Compiling module IDECODE
+Compiling module adder
+Compiling module alu
+Compiling module alu_control
+Compiling module bottom_mux
+Compiling module ex_mem
+Compiling module EXECUTE
+Compiling module AND
+Compiling module data_memory
+Compiling module mem_wb
+Compiling module MEMORY
+Compiling module writeback
+Compiling module pipeline
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 24 Verilog Units
+Built simulation executable /home/ericd/CSE401_LAB/Pipeline/pipeline_isim_beh.exe
+Fuse Memory Usage: 1691932 KB
+Fuse CPU Usage: 460 ms
+GCC CPU Usage: 1220 ms
