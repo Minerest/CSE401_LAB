@@ -6,9 +6,9 @@ module pipeline ();
   reg [31:0] EX_MEM_NPC;
 
   // idecode
-  reg	 [4:0]	MEM_WB_rd;
-  reg				MEM_WB_regwrite;
-  reg	 [31:0]	WB_mux5_writedata;
+  wire	 [4:0]	MEM_WB_rd;
+  wire				MEM_WB_regwrite;
+  wire	 [31:0]	WB_mux5_writedata;
   wire	[1:0]		wb_ctlout;
   wire	[2:0]		m_ctlout;
   wire				regdst, alusrc;
@@ -22,7 +22,11 @@ module pipeline ();
   wire zero;
   wire [31:0] alu_result, rdata2out_pipe, add_result;
   wire [4:0] five_bit_muxout;
-   
+
+  // memory
+  wire MEM_WB_memtoreg;
+  wire [31:0] read_data, mem_alu_result;
+  wire MEM_PCSrc;
    
    initial begin
       $dumpfile("pipeline.vcd");
@@ -47,4 +51,10 @@ module pipeline ();
                      s_extendout, instrout_2016, instrout_1511, wb_ctlout_pipe, branch, memread,
                      memwrite, zero, alu_result, rdata2out_pipe, add_result, five_bit_muxout);
    
+   MEMORY MEMORY4(.wb_ctlout(wb_ctlout_pipe), .branch(branch), .memread(memread), .memwrite(memwrite),
+                  .zero(zero), .alu_result(alu_result), .rdata2out(rdata2out_pipe), .five_bit_muxout(five_bit_muxout),
+                  .MEM_PCSrc(MEM_PCSrc), .MEM_WB_regwrite(MEM_WB_regwrite), .MEM_WB_memtoreg(MEM_WB_memtoreg),
+                  .read_data(read_data), .mem_alu_result(mem_alu_result), .mem_write_reg(MEM_WB_rd));
+
+
 endmodule // pipeline
