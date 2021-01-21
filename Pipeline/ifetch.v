@@ -33,7 +33,7 @@ module ifetch (
    initial begin
       $display("Time\t PC\t npc\t dataout of MEM\t IF_ID_instr\t IF_ID_npc");
       $monitor("%0d\t %0d\t %0d\t %h\t %h\t %0d", $time, PC, npc, dataout,IF_ID_instr,IF_ID_npc);
-      #20 $finish;
+      #24 $finish;
    end
 
 endmodule // ifetch

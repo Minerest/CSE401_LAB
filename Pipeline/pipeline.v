@@ -8,7 +8,7 @@ module pipeline ();
   // idecode
   wire	 [4:0]	MEM_WB_rd;
   wire				MEM_WB_regwrite;
-  wire	 [31:0]	WB_mux5_writedata;
+  wire	 [31:0]	WB_mux_writedata;
   wire	[1:0]		wb_ctlout;
   wire	[2:0]		m_ctlout;
   wire				regdst, alusrc;
@@ -20,7 +20,7 @@ module pipeline ();
   wire [1:0] wb_ctlout_pipe;
   wire branch, memread, memwrite;
   wire zero;
-  wire [31:0] alu_result, rdata2out_pipe, add_result;
+  wire [31:0] alu_result, rdata2out_pipe;
   wire [4:0] five_bit_muxout;
 
   // memory
@@ -37,7 +37,7 @@ module pipeline ();
                     .EX_MEM_PCSrc(EX_MEM_PCSrc),
                     .EX_MEM_NPC(EX_MEM_NPC) );
 
-   IDECODE IDECODE1 (IF_ID_instr, IF_ID_npc, MEM_WB_rd, MEM_WB_regwrite, WB_mux5_writedata,
+   IDECODE IDECODE1 (IF_ID_instr, IF_ID_npc, MEM_WB_rd, MEM_WB_regwrite, WB_mux_writedata,
                      wb_ctlout, m_ctlout, regdst, alusrc, aluop, npcout, rdata1out, rdata2out,
                      s_extendout, instrout_2016, instrout_1511);
    
@@ -50,7 +50,7 @@ module pipeline ();
                   .MEM_PCSrc(EX_MEM_PCSrc), .MEM_WB_regwrite(MEM_WB_regwrite), .MEM_WB_memtoreg(MEM_WB_memtoreg),
                   .read_data(read_data), .mem_alu_result(mem_alu_result), .mem_write_reg(MEM_WB_rd));
    
-   writeback writeback1 (MEM_WB_memtoreg, read_data, mem_alu_result, WB_mux5_writedata);
+   writeback writeback1 (MEM_WB_memtoreg, read_data, mem_alu_result, WB_mux_writedata);
 
 
 endmodule // pipeline

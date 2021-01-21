@@ -10,7 +10,7 @@ module IDECODE(
    input		wire  [31:0]	IF_ID_npcout,
 	input		wire	[4:0]		MEM_WB_rd,
 	input		wire				MEM_WB_regwrite,
-	input		wire	[31:0]	WB_mux5_writedata,
+	input		wire	[31:0]	WB_mux_writedata,
 	output	wire	[1:0]		wb_ctlout,
 	output	wire	[2:0]		m_ctlout,
 	output	wire				regdst, alusrc,
@@ -34,7 +34,7 @@ module IDECODE(
 	register register2	(.rs(IF_ID_instrout[25:21]),
 								.rt(IF_ID_instrout[20:16]),
 								.rd(MEM_WB_rd),
-								.writedata(WB_mux5_writedata),
+								.writedata(WB_mux_writedata),
 								.regwrite(MEM_WB_regwrite),
 								.A(readdat1),
 								.B(readdat2));
@@ -66,6 +66,6 @@ initial begin
 $display("Time\t WB\t M\t EX\t NPCout\t rdata1\t rdata2\t sign_e\t in2016\t in1511"); 
         $monitor("%0d\t %0b\t %0b\t %0b\t %0d\t %0d\t %0d\t %0d\t %0d\t %0d\t",
             $time, wb_ctlout, m_ctlout, ctlex_out, npcout, rdata1out, rdata2out, s_extendout,instrout_2016, instrout_1511); 
-        #20 $finish;
+        #24 $finish;
 end
 endmodule // IDECODE

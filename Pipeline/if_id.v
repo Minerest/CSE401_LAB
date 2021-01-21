@@ -6,8 +6,8 @@ module if_id (
                           npc        // Input of IF/ID NPC Register
    );
    initial begin
-      instrout <= 0;
-      npcout   <= 0;
+      instrout <= 32'b0;
+      npcout   <= 32'b0;
    end
    always @* begin
       #1 instrout <= instr;

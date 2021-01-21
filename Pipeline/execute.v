@@ -41,6 +41,6 @@ module EXECUTE(
         $display("Time\t WB\t branch\t memread\t memwrite\t ADD\t ZERO\t alu\t rdata2\t fivebitmux\t"); 
         $monitor("%0d\t %0b\t %0b\t %0b\t %0b\t %0d\t %0d\t %0d\t %0d\t %0d\t",
         $time, wb_ctlout, branch, memread, memwrite, add_result, zero, alu_result, rdata2out, five_bit_muxout); 
-        #20 $finish;
+        #24 $finish;
 end
 endmodule // IEXECUTE

@@ -6,10 +6,15 @@ module memory (
 
 // Register Declarations
    reg [31:0] MEM[0:127];  // 128 words of 32-bit memory
-	reg [5:0] i;
+
+   integer i;
+
 // Initialize Registers
    initial begin
 	$readmemb("risc.txt", MEM);
+   for (i = 0; i < 24; i = i + 1)
+      $display (MEM[i]);
+   end
 		
 	/*
    MEM[0] <= 'h002300AA;
@@ -20,8 +25,10 @@ module memory (
    MEM[5] <= 'hAD654321;
    MEM[6] <= 'h13012345;
    MEM[7] <= 'hAC654321;
-   MEM[8] <= 'h12012345;*/
-   end
+   MEM[8] <= 'h12012345;
+   */
 
-   always @ (addr) data <= MEM[addr];
+   always @ (addr) begin 
+      data <= MEM[addr];
+   end
 endmodule // mem
